@@ -1,0 +1,9 @@
+{% extends "master.html" %}
+{% block title %}{{ myblog.title }}{% endblock %}
+{% block content %}
+<h1>{{ myblog.title }}</h1>
+<p>Category: {{ myblog.category.name }}</p>
+<p>Published: {{ myblog.date_published }}</p>
+<p>{{ myblog.content }}</p>
+<p>Back to <a href="{% url 'blogs' %}">Articles</a></p>
+{% endblock %}

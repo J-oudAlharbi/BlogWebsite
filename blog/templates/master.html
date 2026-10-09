@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <header>
+    <h2> Welcome to my Django Blog Website</h2>
+    <nav>
+      <a href="{% url 'main' %}">Home</a> |
+      <a href="{% url 'blogs' %}">Articles</a> |
+      <a href="{% url 'users' %}">Users</a> |
+      <a href="{% url 'comments' %}">Comments</a> |
+      <a href="{% url 'categories' %}">Categories</a>
+    </nav>
+    <hr>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer>
+    <hr>
+    <p>&copy; 2026 BlogWebsite - Crafted with Django </p>
+  </footer>
+</body>
+</html>

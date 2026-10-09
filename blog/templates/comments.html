@@ -1,0 +1,10 @@
+{% extends "master.html" %}
+{% block title %}Reviews{% endblock %}
+{% block content %}
+<h1>Reviews</h1>
+<ul>
+  {% for c in mycomments %}
+  <li>[Blog ID: {{ c.post.id }}] {{ c.content }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
